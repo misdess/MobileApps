@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="info">info</string>
+    <string name="first">first</string>
+    <string name="second">second</string>
+    <string name="result">result</string>
+    <string name="ok">show</string>
+
+</resources>

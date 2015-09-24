@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   
+   android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="performa mathematical operations"       
+        android:id="@+id/info"
+        android:layout_alignParentTop="true" 
+        android:layout_alignParentLeft="true"       
+        />
+    
+     <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="operand 1"
+        android:id="@+id/first"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/info" />
+      <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="operator"
+        android:id="@+id/operator"
+        android:layout_below="@id/info"
+        android:layout_toRightOf="@id/first"/>
+     
+     
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="operand 2"
+        android:id="@+id/second"
+        android:layout_toRightOf="@id/operator"
+        android:layout_below="@+id/info" />
+    
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show"
+        android:id="@+id/show"
+        android:layout_below="@id/first" 
+        android:onClick="handlerMethod"   
+        />
+
+</RelativeLayout>
