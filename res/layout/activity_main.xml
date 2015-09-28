@@ -1,28 +1,57 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="top"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.helloandroid.MainActivity" >
+    tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
-   <Button 
+        android:layout_alignLeft="@+id/email"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:text="Welcome to ReportApp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show"
-        android:onClick="handlerMethod"   
-        />
-   <Button 
+        android:layout_alignLeft="@+id/button"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show"
-        android:onClick="handlerMethod"   
-        />
-</LinearLayout>
+        android:layout_alignLeft="@+id/email"
+        android:layout_below="@+id/email"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/password"
+        android:layout_marginLeft="155dp"
+        android:text="Login" 
+        android:onClick="handlerMethod"/>
+
+</RelativeLayout>

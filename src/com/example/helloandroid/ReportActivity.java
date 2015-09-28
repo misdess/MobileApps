@@ -1,25 +1,25 @@
 package com.example.helloandroid;
 
-import android.support.v7.app.ActionBarActivity;
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.*;
 
 @SuppressLint("NewApi")
-public class secondActivity extends ActionBarActivity {
+public class ReportActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		Intent intentObj =getIntent();
-		String op1=intentObj.getStringExtra("operand1");
-		String operator=intentObj.getStringExtra("operator");
-		String op2=intentObj.getStringExtra("operand2");
+//		Intent intentObj =getIntent();
+//		String op1=intentObj.getStringExtra("operand1");
+//		String operator=intentObj.getStringExtra("operator");
+//		String op2=intentObj.getStringExtra("operand2");
+		System.out.println("misganu from second activity");
 		
-		
-		setContentView(R.layout.activity_relative);
+		setContentView(R.layout.fill_report_form);
 	}
 
 	@Override
@@ -41,8 +41,8 @@ public class secondActivity extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 	public void handlerMethod(View clickedButton){
-		String someName=getString(R.string.show_result);
-		Intent intentObj= new Intent(getApplicationContext(), MainActivity.class);
+		Intent intentObj= new Intent(getApplicationContext(), SubmitSuccessfulActivity.class);
+		
 		startActivity(intentObj);
 	}
 }
